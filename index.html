@@ -37,15 +37,11 @@ h1 {
 }
 
 .navbar {
-    background-color: #fff;
+    background-color: #DDB744;
     text-align: center;
     padding: 10px;
     border-bottom: 2px solid #151515;
-    transition: 0.5s border-color;
-}
-
-.main {
-    margin-top: 100px;
+    transition: 0.5s background-color;
 }
 
 .cards {
@@ -55,12 +51,14 @@ h1 {
 .logo {
     width: 200px;
     text-align: center;
-    height: 50px;
-    background-image: url('./ttw.svg');
+    height: 200px;
+    background-image: url('./ttw-cropped.png');
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
     margin-top: 1px;
+    -webkit-filter: drop-shadow( 2px 2px 5px #151515 );
+    filter: drop-shadow( 2px 2px 5px #151515 );
 }
 
 .card {}
@@ -274,7 +272,7 @@ footer {
 </style>
 
 <body>
-    <nav id="navbar" class="navbar navbar-fixed-top">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div>
                 <div class="logo">
@@ -342,11 +340,20 @@ footer {
         <div class="container col-md-6">
             <div id="slide1" class="jumbotron slide">
                 <h1 class="display-3">upcoming classes:</h1>
-                <p class="lead">Spring Break Writing Retreat
-                    <br>Monday April 10 - Thursday April 13, 12pm-3pm
-                    <br>Location: 1 Tiffany Place<br/>Fee: $275</p>
-                <hr class="my-4">
-                <p>Time to Write’s Spring Break Writing Retreat is a workshop-based writing program for twelve- to fifteen-year-olds. This four-day group class provides a supportive, dynamic, and fun atmosphere for kids to work on their writing and critical feedback skills during Spring Break. Time will be provided in each meeting for reading, free-writing, feedback sharing, and guided peer revision. Each workshop will allow at least one student to read their work aloud and receive constructive feedback from their peers and teachers.</p>
+                <p class="lead"><h4>Application Essay Workshop</h4>
+                    <br>Ages: 12-15
+                    <br>Date: Saturday, June 3rd
+                    <br>Time: 2pm-6pm
+                    <br>Location: 1 Tiffany Place<br/>Fee: $175</p>
+                <p>Time to Write’s Application Essay Workshop is a one-day workshop that provides a supportive, dynamic, and fun atmosphere for students to focus on their personal statements and other required essays for admissions applications. Time will be provided for reading sample essays, free-writing, feedback sharing, and guided peer revision. Students will have the opportunity to read their writing aloud and receive constructive feedback from their peers and teachers. Together, we will discuss student work and the work of published authors in terms of voice, tone, detail, and other craft elements especially useful for writing personal essays. This course is open to young writers of any level.</p>
+                To register, email us at <a href="mailto:timetowritenyc@gmail.com">timetowritenyc@gmail.com</a>
+                <hr />
+                <p class="lead"><h4>Flash Fiction Workshop</h4>
+                    <br>Ages: 12-15
+                    <br>Date: Saturday, June 10th
+                    <br>Time: 2pm-6pm
+                    <br>Location: 1 Tiffany Place<br/>Fee: $175</p>
+                <p>Time to Write’s one-day Flash Fiction Workshop is an immersive introduction to writing very short stories. In this exciting and inspiring class students will read examples of flash fiction, write in response to generative prompts, share feedback, and practice guided peer revision. Students will have opportunities to read their work aloud and receive constructive feedback from their peers and teachers. Together, we will discuss student work and the work of published authors in terms of character, voice, dialog, description, setting, and other craft elements especially useful to writers of flash fiction. This course is open to young writers of any level.</p>
                 To register, email us at <a href="mailto:timetowritenyc@gmail.com">timetowritenyc@gmail.com</a>
             </div>
             <div id="slide2" class="slide">
@@ -393,7 +400,7 @@ footer {
         </div>
     </div>
     <script>
-    var colors = ["#EF8A17", "#008148", "#EF2917", "#C6C013"]
+    var colors = ["#DDB744", "#008148", "#EF2917", "#EF8A17"]
     document.getElementById('pagenav').addEventListener('click', function(e) {
         e.preventDefault();
         if (e.target.nodeName === "A") {
@@ -405,7 +412,7 @@ footer {
             document.getElementById('slide3').style.opacity = 0;
             document.getElementById('slide4').style.opacity = 0;
             document.getElementById('slide' + number).style.opacity = 1;
-            document.getElementById('navbar').style.borderColor = colors[number - 1];
+            document.getElementById('navbar').style.backgroundColor = colors[number - 1];
         }
     });
     </script>
